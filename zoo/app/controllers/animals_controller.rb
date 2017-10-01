@@ -16,4 +16,15 @@ class AnimalsController < ApplicationController
     animal.save
     redirect_to animals_path
   end
+
+  def edit
+    @animal = Animal.find(params[:id])
+  end
+
+  def update
+    animal_update = params[:animal]
+    @animal = Animal.find(params[:id])
+    @animal.update(name: animal_update[:name], species: animal_update[:species], age: animal_update[:age])
+    redirect_to animal_path(params[:id])
+  end
 end

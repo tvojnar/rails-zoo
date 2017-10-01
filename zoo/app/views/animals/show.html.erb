@@ -1,5 +1,11 @@
 <h1>Show page for animal</h1>
 
 <div>
-  <%= @animal.name %> is a <%= @animal.age %> year old <%= @animal.species %> at the zoo. 
+  <%= @animal.name %> is a <%= @animal.age %> year old <%= @animal.species %> at the zoo.
 </div>
+
+
+<p>
+  <%= link_to "Back to index", animals_path %>
+  <%= link_to "Edit Animal", edit_animal_path(@animal.id) %>
+</p>

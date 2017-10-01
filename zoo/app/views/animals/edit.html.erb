@@ -1,0 +1,16 @@
+<h1>Edit an animal</h1>
+
+<div>
+  <%= form_for @animal do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :species %>
+    <%= f.text_field :species %>
+
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+
+    <%= f.submit %>
+  <% end %>
+</div>
