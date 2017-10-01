@@ -27,4 +27,10 @@ class AnimalsController < ApplicationController
     @animal.update(name: animal_update[:name], species: animal_update[:species], age: animal_update[:age])
     redirect_to animal_path(params[:id])
   end
+
+  def destroy
+    animal = Animal.find(params[:id])
+    animal.destroy
+    redirect_to animals_path
+  end
 end
